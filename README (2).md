@@ -34,7 +34,7 @@ Algorithm:
 5.	Visualization:
 Plot the message signal, carrier signal, DSBSC modulated signal, and the recovered signal after demodulation.
 
-PROCEDURE
+PROCEDURE:
 
 •	Refer Algorithms and write code for the experiment.
 •	Open Google COLAB in System
@@ -45,18 +45,46 @@ PROCEDURE
 •	Verify the generated waveform using Tabulation and Model Waveform
 
 
-Model Waveform
+Model Waveform:
+
+<img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
+
+
+Program:
+```
+import numpy as np
+import matplotlib.pyplot as plt
+Am=2.20
+fm=294
+fs=29400
+Ac=3.20
+fc=2940
+t=np.arange(0,2/fm,1/fs)
+m=Am*np.cos(2*3.14*fm*t)
+plt.subplot(3,1,1)
+plt.plot(t,m)
+c=Ac*np.cos(2*3.14*fc*t)
+plt.subplot(3,1,2)
+plt.plot(t,c)
+s1=(Ac+m)*np.cos(2*3.14*fc*t)
+s2=(Ac-m)*np.cos(2*3.14*fc*t)
+s=s1-s2
+plt.subplot(3,1,3)
+plt.plot(t,s)
+plt.tight_layout()
+plt.show()
+```
+
+Output Graph:
+
+<img width="786" height="581" alt="image" src="https://github.com/user-attachments/assets/63c7ee49-4891-4b5e-80e6-5123e18900c5" />
 
 
 
-Program
-
-Output Graph
+Tablular Column:
 
 
-Tablular Column
-
-
-Result
+Result:
 
 Thus the DSB-SC-AM Modulation and Demodulation is generated.
+
