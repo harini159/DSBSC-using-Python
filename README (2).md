@@ -1,54 +1,35 @@
 
 # DSBSC using Python
 
-EX NO: 6	DSB-SC-AM MODULATOR AND DEMODULATOR
+EX NO: 6 DSBSC Modulation using NumPy and Matplotlib
 
 AIM:
 
-To write a program to perform DSBSC modulation and demodulation using COLAB and study its spectral characteristics
+To implement and analyze phase modulation (PM) using Python's NumPy and Matplotlib libraries. 
 
-EQUIPMENTS REQUIRED:
-
-•	Computer with i3 Processor
-•	Google COLAB
+Apparatus Required:
+1. Software: Python with NumPy and Matplotlib libraries 
+2. Hardware: Personal Computer Theory
 
 Note: Keep all the switch faults in off position
 
 
 Algorithm:
 
-1. Define Parameters:
-•	Fs: Sampling frequency.
-•	T: Duration of the signal.
-•	Fc: Carrier frequency.
-•	Fm: Frequency of the message signal.
-•	Amplitude: Maximum amplitude of the message signal.
-2.	Generate Signals:
-•	Message Signal: A sinusoidal signal that will be modulated.
-•	Carrier Signal: A high-frequency sinusoidal signal used for modulation.
-3.	DSBSC Modulation:
-•	Modulated Signal: Multiply the message signal by the carrier signal to produce the DSBSC signal.
-4.	DSBSC Demodulation:
-•	Multiplication: Multiply the modulated signal by the carrier signal to get the product of the message signal with itself (i.e., the original message signal plus high-frequency components).
-•	Low-pass Filtering: Apply a Butterworth low-pass filter to remove the high- frequency components and recover the original message signal.
-5.	Visualization:
-Plot the message signal, carrier signal, DSBSC modulated signal, and the recovered signal after demodulation.
-
-PROCEDURE:
-
-•	Refer Algorithms and write code for the experiment.
-•	Open Google COLAB in System
-•	Type your code in New Editor
-•	Save the file
-•	Execute the code
-•	If any Error, correct it in code and execute again
-•	Verify the generated waveform using Tabulation and Model Waveform
-
-
-Model Waveform:
-
-<img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
-
+1. Set Up the Python Environment: Ensure that Python is installed on your system. You can use 
+Anaconda for managing Python packages and environments, or any other Python IDE of your choice. 
+2. Import Necessary Libraries: Import the math library in Python. 
+3. Initialize Parameters: 
+o Set values for carrier amplitude (AcA_cAc), carrier frequency (fcf_cfc), message frequency 
+(fmf_mfm), sampling frequency, and phase deviation sensitivity (kpk_pkp). 
+4. Generate Time Axis: 
+o Create a time vector for the signal duration based on the sampling frequency. 
+5. Generate Message Signal: 
+o Define the message signal as a cosine wave. 
+6. Generate DSBSC Signal: 
+o Apply the DSBSC modulation formula to obtain the modulated signal. 
+7. Plot the Signals: 
+o Use Matplotlib to plot the message signal, carrier signal, and DSBSC modulated signal. 
 
 Program:
 ```
@@ -75,16 +56,21 @@ plt.tight_layout()
 plt.show()
 ```
 
+Model Waveform:
+
+<img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
+
 Output Graph:
 
 <img width="786" height="581" alt="image" src="https://github.com/user-attachments/assets/63c7ee49-4891-4b5e-80e6-5123e18900c5" />
 
-
-
 Tablular Column:
 
+![WhatsApp Image 2025-10-21 at 8 54 13 PM](https://github.com/user-attachments/assets/eefd0bf9-0b49-4394-bfe3-3993d8c0b96a)
 
 Result:
+ 
+The message signal, carrier signal, and phase-modulated (PM) signal will be displayed in separate plots. The modulated signal will show phase variations corresponding to the amplitude of the message signal. 
 
-Thus the DSB-SC-AM Modulation and Demodulation is generated.
+
 
